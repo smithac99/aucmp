@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		E7511DDE294DD339009F6D67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E7511DDD294DD339009F6D67 /* main.m */; };
+		E7511DE6294DD362009F6D67 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7511DE5294DD362009F6D67 /* CoreAudio.framework */; };
+		E7511DE9294DD392009F6D67 /* AS_AudioFile.m in Sources */ = {isa = PBXBuildFile; fileRef = E7511DE8294DD392009F6D67 /* AS_AudioFile.m */; };
+		E7511DEC294DFBCF009F6D67 /* AS_Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = E7511DEB294DFBCF009F6D67 /* AS_Controller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +28,11 @@
 /* Begin PBXFileReference section */
 		E7511DDA294DD339009F6D67 /* aucmp */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = aucmp; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7511DDD294DD339009F6D67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E7511DE5294DD362009F6D67 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		E7511DE7294DD392009F6D67 /* AS_AudioFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AS_AudioFile.h; sourceTree = "<group>"; };
+		E7511DE8294DD392009F6D67 /* AS_AudioFile.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AS_AudioFile.m; sourceTree = "<group>"; };
+		E7511DEA294DFBCF009F6D67 /* AS_Controller.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AS_Controller.h; sourceTree = "<group>"; };
+		E7511DEB294DFBCF009F6D67 /* AS_Controller.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AS_Controller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7511DE6294DD362009F6D67 /* CoreAudio.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,6 +52,7 @@
 			children = (
 				E7511DDC294DD339009F6D67 /* aucmp */,
 				E7511DDB294DD339009F6D67 /* Products */,
+				E7511DE4294DD362009F6D67 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +68,20 @@
 			isa = PBXGroup;
 			children = (
 				E7511DDD294DD339009F6D67 /* main.m */,
+				E7511DEA294DFBCF009F6D67 /* AS_Controller.h */,
+				E7511DEB294DFBCF009F6D67 /* AS_Controller.m */,
+				E7511DE7294DD392009F6D67 /* AS_AudioFile.h */,
+				E7511DE8294DD392009F6D67 /* AS_AudioFile.m */,
 			);
 			path = aucmp;
+			sourceTree = "<group>";
+		};
+		E7511DE4294DD362009F6D67 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E7511DE5294DD362009F6D67 /* CoreAudio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,7 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E7511DE9294DD392009F6D67 /* AS_AudioFile.m in Sources */,
 				E7511DDE294DD339009F6D67 /* main.m in Sources */,
+				E7511DEC294DFBCF009F6D67 /* AS_Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,7 +262,9 @@
 		E7511DE2294DD339009F6D67 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KL6ZKG8Z;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -246,7 +272,9 @@
 		E7511DE3294DD339009F6D67 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 55KL6ZKG8Z;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
